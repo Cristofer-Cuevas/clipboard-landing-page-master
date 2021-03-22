@@ -1,0 +1,334 @@
+@use 'abstracts/font-styles' as *;
+@use 'components/buttons' as *;
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  background-image: url(/assets/images/bg-header-mobile.png),
+    url(/assets/images/logo.svg);
+  background-repeat: no-repeat;
+  background-size: 100%, 30%;
+  background-position: top right, center 3%;
+  text-align: center;
+}
+
+.container {
+  margin-top: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 90%;
+}
+
+.download-container-header {
+  color: $header-colors;
+  font-size: $font-s;
+}
+
+.download-container-paragraph {
+  padding: 0 0.5em;
+  opacity: $paragraph-opacity;
+  line-height: $line-height;
+}
+
+.ios-link {
+  display: block;
+  @include ios-download-butoon;
+  margin: 3em 0 1em 0;
+  text-decoration: none;
+}
+
+.mac-link {
+  display: block;
+  @include mac-download-butoon;
+  text-decoration: none;
+}
+
+// KEEP TRACK OF YOUR SNIPPETS, CONTAINER STYLES
+
+.second-container {
+  margin-top: 8em;
+}
+
+.second-container-header {
+  font-size: $font-s;
+  color: $header-colors;
+}
+
+.second-container-paragraph {
+  line-height: $line-height;
+  opacity: $paragraph-opacity;
+}
+
+// QUICK SEARCH, CONTAINER STLYES
+
+.third-container {
+  margin-top: 4em;
+}
+
+.image-computer,
+.image-devices {
+  width: 100%;
+  margin-bottom: 4em;
+}
+
+.third-container-header {
+  margin: 0;
+  padding: 0;
+  font-size: 1.7rem;
+  color: $header-colors;
+}
+
+.third-container-paragraph {
+  padding: 0;
+  margin-bottom: 2.7em;
+  margin-top: 0.5em;
+  line-height: $line-height;
+  opacity: $paragraph-opacity;
+}
+
+// ACCESS CLIPBOARD ANYWHERE, CONTAINER STYLES
+
+.fourth-container {
+  margin-top: 9em;
+}
+
+.fourth-container-header {
+  font-size: $font-s;
+  color: $header-colors;
+}
+
+.fourth-container-paragraph {
+  opacity: $paragraph-opacity;
+  line-height: $line-height;
+  padding-bottom: 2.5em;
+}
+
+// SUPERCHARGE YOUR WORK FLOW, CONTAINER STYLES
+
+.fiveth-container {
+  margin-top: 4em;
+}
+
+.fiveth-container-header {
+  font-size: $font-s;
+  color: $header-colors;
+}
+
+.fiveth-container-paragraph {
+  opacity: $paragraph-opacity;
+  line-height: $line-height;
+  padding-bottom: 4em;
+}
+
+.fiveth-container-header__item {
+  color: $header-colors;
+}
+
+// COMPANIES LOGOS, COTAINER STYLES
+
+.company-logos-container {
+  margin-top: 2em;
+}
+
+.company-logos-container__item {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 4.5em;
+}
+
+.bottom-download-container {
+  margin-top: 5em;
+  margin-bottom: 10em;
+}
+
+.bottom-download-container-header {
+  color: $header-colors;
+  font-size: $font-s;
+}
+
+.bottom-download-container-paragraph {
+  opacity: $paragraph-opacity;
+  line-height: $line-height;
+}
+
+// !FOOOTER!
+
+li {
+  list-style-type: none;
+}
+
+.footer-container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.bottom-logo-image {
+  width: 20%;
+  padding-bottom: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  color: $header-colors;
+}
+
+.page-links__item {
+  width: 90%;
+  padding-bottom: 1.5em;
+  color: $header-colors;
+  font-size: 1.2rem;
+}
+
+// !SOCIAL_LOGOS!
+
+.social-logos {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: 3.5em;
+  background-image: url(/assets/images/icon-facebook.svg),
+    url(/assets/images/icon-twitter.svg), url(/assets/images/icon-instagram.svg);
+  background-size: 10%;
+  background-repeat: no-repeat;
+  background-position: 20%, 50%, 80%;
+  margin-bottom: 10%;
+}
+
+// END OF THE MOBILE STYLES
+
+@media screen and (min-width: 45em) {
+  body {
+    background-image: url(/assets/images/bg-header-desktop.png),
+      url(/assets/images/logo.svg);
+    background-size: 100%, 10%;
+  }
+
+  .container {
+    margin-top: 25%;
+    width: 100%;
+  }
+
+  .ios-link {
+    display: inline-block;
+    margin: 1em 0.5em 1em 0;
+  }
+
+  .ios-link:hover,
+  .mac-link:hover {
+    opacity: 0.5;
+  }
+
+  .mac-link {
+    display: inline-block;
+  }
+
+  .download-container,
+  .second-container {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .third-container {
+    text-align: initial;
+    max-width: 80%;
+    margin-bottom: 20%;
+  }
+
+  .image-computer {
+    margin-right: 5em;
+    float: left;
+    width: 60%;
+  }
+
+  .third-container-header {
+    font-size: 1.5vmax;
+  }
+
+  .third-container-paragraph {
+    font-size: 1vmax;
+  }
+
+  .fourth-container {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .image-devices {
+    width: 100%;
+  }
+
+  // This container is only to style the paragrahp and header along side the computer 
+  .paragraph-container {
+    padding-top: 50px;
+  }
+
+  .fiveth-container {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .sub-container {
+    display: flex;
+  }
+
+  // This span saparates each img, header, and text of the fiveth container, these are used just in this mediaquery :)
+
+  span {
+    padding-right: 3em;
+  }
+
+  .company-logos-container {
+    display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8em;
+  }
+
+  .company-logos-container__item {
+    width: 10%;
+  }
+
+  .footer-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #f5f6f8;
+    height: 150px;
+    text-align: initial;
+  }
+
+  .bottom-logo-image {
+    width: 5%;
+    padding: 0% 0 0% 9%;
+  }
+
+  .page-links-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 15%;
+    height: 90px;
+    padding-top: 2%;
+    padding-bottom: 0;
+  }
+  
+  .page-links__item {
+    font-size: 1rem;
+    text-decoration: none;
+  }
+
+  .social-logos {
+    width: 15%;
+    margin-top: 10%;
+    margin-right: 10%;
+  }
+
+  a:hover {
+    color: hsl(171.1, 66.2%, 44.1%);
+  }
+}

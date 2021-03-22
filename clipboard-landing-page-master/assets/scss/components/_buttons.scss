@@ -1,0 +1,27 @@
+@mixin ios-download-butoon(
+  $padding: 1em 2.5em,
+  $bg-color: hsl(171.1, 66.2%, 44.1%),
+  $color: whitesmoke,
+  $border-radius: 2em,
+  $font-weight: 600
+) {
+  padding: $padding;
+  background-color: $bg-color;
+  color: $color;
+  border-radius: $border-radius;
+  font-weight: $font-weight;
+}
+
+@mixin mac-download-butoon(
+  $padding: 1em 2.5em,
+  $bg-color: hsl(232.8, 100%, 69%),
+  $color: whitesmoke,
+  $font-weight: 600,
+  $border-radius: 2em
+) {
+  padding: $padding;
+  background-color: $bg-color;
+  color: $color;
+  font-weight: $font-weight;
+  border-radius: $border-radius;
+}
